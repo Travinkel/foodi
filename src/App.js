@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
       </header>
+    </div>
+  );
+}
+
+function foodCard(props) {
+  return (
+    <div className="foodCard">
+      <h1>{props.food.name}</h1>
+      <p>{props.food.description}</p>
+      <p>{props.food.price}</p>
+    </div>
+  );
+}
+
+function mealCard(props) {
+  return (
+    <div className="mealCard">
+      <h1>{props.meal.name}</h1>
+      <p>{props.meal.description}</p>
+      <p>{props.meal.price}</p>
     </div>
   );
 }
